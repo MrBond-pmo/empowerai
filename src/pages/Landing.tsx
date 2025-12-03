@@ -167,15 +167,15 @@ export default function Landing() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="flex-1 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-black uppercase">{t.sections.ready} <span className="text-secondary bg-secondary/10 px-2 rounded-lg">{t.features.mentorship}</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black uppercase">{t.sections.ready} <span className="text-black bg-secondary px-2 rounded-lg">{t.features.mentorship}</span></h2>
               <p className="text-xl font-bold text-muted-foreground">
                 Connect with women leaders who have walked your path. Our AI matches you based on industry, language, and shared experiences.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Tech</Badge>
-                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Business</Badge>
-                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Arts</Badge>
-                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Science</Badge>
+                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Tech</Badge>
+                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Business</Badge>
+                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Arts</Badge>
+                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Science</Badge>
               </div>
               <Button className="neo-button-secondary mt-4" onClick={() => navigate("/mentorship")}>
                 Find a Mentor
