@@ -55,8 +55,37 @@
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.8 0.2 150); /* #00FF80 Greenish */
   --secondary-foreground: oklch(0.1 0 0);
-  --muted: oklch(0.3 0 0);
+  --muted: oklch(0.25 0 0);
+  --muted-foreground: oklch(0.6 0 0);
+>>>>>>> REPLACE
+<<<<<<< SEARCH
+.dark {
+  --background: oklch(0.15 0 0); /* Deep Charcoal */
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.6 0.25 330); /* #FF0080 */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.8 0.2 150); /* #00FF80 */
+  --secondary-foreground: oklch(0.1 0 0);
+  --muted: oklch(0.25 0 0);
   --muted-foreground: oklch(0.7 0 0);
+=======
+.dark {
+  --background: oklch(0.15 0 0); /* Deep Charcoal */
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.2 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.6 0.25 330); /* #FF0080 */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.8 0.2 150); /* #00FF80 */
+  --secondary-foreground: oklch(0.1 0 0);
+  --muted: oklch(0.2 0 0);
+  --muted-foreground: oklch(0.6 0 0);
   --accent: oklch(0.6 0.2 250); /* #0080FF Blueish */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.6 0.25 20);
