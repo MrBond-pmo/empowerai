@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export function GeminiChat() {
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hi! I'm your AI Career & Safety Assistant powered by Gemini 2.5 Flash. How can I help you today?" }
+    { role: "assistant", content: "Hi! I'm your AI Career & Safety Assistant. How can I help you today?" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -50,8 +50,8 @@ export function GeminiChat() {
           <Sparkles className="h-5 w-5 text-primary" />
         </div>
         <div>
-          <h3 className="font-black text-white text-lg uppercase">Gemini Assistant</h3>
-          <p className="text-xs text-white/80 font-bold">Powered by Gemini 2.5 Flash</p>
+          <h3 className="font-black text-white text-lg uppercase">AI Assistant</h3>
+          <p className="text-xs text-white/80 font-bold">Powered by Advanced AI</p>
         </div>
       </div>
 

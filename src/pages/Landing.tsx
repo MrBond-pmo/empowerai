@@ -101,7 +101,7 @@ export default function Landing() {
       <section id="skills" className="py-20 bg-card border-y-4 border-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">{t.sections.poweredBy} <span className="text-primary">Gemini 2.5 Flash</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">{t.sections.poweredBy} <span className="text-primary">Advanced AI</span></h2>
             <p className="text-xl font-bold text-muted-foreground max-w-2xl mx-auto">
               Our advanced AI engine understands your context, language, and goals to provide hyper-personalized support.
             </p>

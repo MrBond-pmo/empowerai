@@ -16,7 +16,7 @@ export default function Skills() {
           <Badge className="mb-4 bg-accent text-white border-2 border-black">AI-Powered Learning</Badge>
           <h1 className="text-4xl md:text-6xl font-black uppercase mb-4">Skill Development</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-bold">
-            Personalized learning paths curated by Gemini AI to help you reach your career goals.
+            Personalized learning paths curated by AI to help you reach your career goals.
           </p>
         </div>
 

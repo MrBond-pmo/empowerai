@@ -54,7 +54,7 @@ export function Footer() {
           <div className="bg-background border-4 border-black p-4 rounded-lg neo-shadow-sm">
             <h3 className="font-black text-lg mb-2 uppercase text-primary">Responsible AI</h3>
             <p className="text-xs font-medium mb-2">
-              Powered by Gemini 2.5 Flash. We prioritize data privacy and ethical AI use.
+              Powered by Advanced AI. We prioritize data privacy and ethical AI use.
             </p>
             <div className="text-xs font-bold text-muted-foreground">
               © 2024 MahileAI. All rights reserved.

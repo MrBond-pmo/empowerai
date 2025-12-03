@@ -14,7 +14,7 @@ export default function Safety() {
           <Badge className="mb-4 bg-destructive text-white border-2 border-black">24/7 Support</Badge>
           <h1 className="text-4xl md:text-6xl font-black uppercase mb-4">Safety Intelligence</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-bold">
-            Real-time threat analysis, emergency response, and legal guidance powered by Gemini AI.
+            Real-time threat analysis, emergency response, and legal guidance powered by AI.
           </p>
         </div>
 
