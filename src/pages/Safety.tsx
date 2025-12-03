@@ -25,10 +25,8 @@ export default function Safety() {
                 <p className="font-bold mb-8 text-lg">
                     Instantly alert your emergency contacts and local authorities with your live location and audio recording.
                 </p>
-                <Button asChild className="w-full bg-white text-destructive border-4 border-black h-20 text-2xl font-black hover:bg-gray-100">
-                    <a href="tel:100">
-                        ACTIVATE SOS
-                    </a>
+                <Button className="w-full bg-white text-destructive border-4 border-black h-20 text-2xl font-black hover:bg-gray-100">
+                    ACTIVATE SOS
                 </Button>
             </div>
 
