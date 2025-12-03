@@ -18,7 +18,7 @@ export default function Safety() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="neo-card p-8 bg-destructive text-white">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-white rounded-full border-4 border-black">
+              <div className="p-4 bg-white rounded-full border-4 border-border">
                 <AlertTriangle className="h-8 w-8 text-destructive" />
               </div>
               <h2 className="text-3xl font-black uppercase">Emergency SOS</h2>
@@ -26,14 +26,14 @@ export default function Safety() {
             <p className="font-bold mb-8 text-lg">
               Instantly alert your emergency contacts and local authorities with your live location.
             </p>
-            <Button className="w-full h-20 text-2xl font-black bg-white text-destructive border-4 border-black hover:bg-gray-100 uppercase">
+            <Button className="w-full h-20 text-2xl font-black bg-white text-destructive border-4 border-border hover:bg-gray-100 uppercase">
               Trigger SOS
             </Button>
           </div>
 
           <div className="neo-card p-8 bg-primary text-white">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-white rounded-full border-4 border-black">
+              <div className="p-4 bg-white rounded-full border-4 border-border">
                 <Shield className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-3xl font-black uppercase">AI Guardian</h2>
@@ -42,10 +42,10 @@ export default function Safety() {
               Analyze your surroundings or conversations for potential threats using Gemini AI.
             </p>
             <div className="flex gap-4">
-              <Button className="flex-1 h-16 font-black bg-white text-primary border-4 border-black hover:bg-gray-100">
+              <Button className="flex-1 h-16 font-black bg-white text-primary border-4 border-border hover:bg-gray-100">
                 <Mic className="mr-2 h-6 w-6" /> Record Audio
               </Button>
-              <Button className="flex-1 h-16 font-black bg-white text-primary border-4 border-black hover:bg-gray-100">
+              <Button className="flex-1 h-16 font-black bg-white text-primary border-4 border-border hover:bg-gray-100">
                 <MapPin className="mr-2 h-6 w-6" /> Share Location
               </Button>
             </div>
@@ -58,13 +58,13 @@ export default function Safety() {
               <Phone className="h-5 w-5" /> Emergency Contacts
             </h3>
             <div className="space-y-3">
-              <Button variant="outline" className="w-full justify-between border-2 border-black font-bold h-12">
+              <Button variant="outline" className="w-full justify-between border-2 border-border font-bold h-12">
                 Police Control Room <span>100</span>
               </Button>
-              <Button variant="outline" className="w-full justify-between border-2 border-black font-bold h-12">
+              <Button variant="outline" className="w-full justify-between border-2 border-border font-bold h-12">
                 Women's Helpline <span>1091</span>
               </Button>
-              <Button variant="outline" className="w-full justify-between border-2 border-black font-bold h-12">
+              <Button variant="outline" className="w-full justify-between border-2 border-border font-bold h-12">
                 Domestic Abuse <span>181</span>
               </Button>
             </div>
@@ -72,7 +72,7 @@ export default function Safety() {
 
           <div className="neo-card p-6 bg-card">
             <h3 className="text-xl font-black uppercase mb-4">Safe Zones</h3>
-            <div className="h-48 bg-gray-200 border-2 border-black rounded-lg flex items-center justify-center font-bold text-muted-foreground">
+            <div className="h-48 bg-gray-200 border-2 border-border rounded-lg flex items-center justify-center font-bold text-muted-foreground">
               Map View Placeholder
             </div>
           </div>

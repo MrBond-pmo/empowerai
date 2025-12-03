@@ -19,7 +19,7 @@ export default function Mentorship() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[1, 2, 3, 4, 5, 6].map((i) => (
             <div key={i} className="neo-card p-6 bg-card flex flex-col items-center text-center">
-              <div className="h-24 w-24 rounded-full bg-gray-200 border-4 border-black mb-4 flex items-center justify-center">
+              <div className="h-24 w-24 rounded-full bg-gray-200 border-4 border-border mb-4 flex items-center justify-center">
                 <Users className="h-10 w-10 text-gray-500" />
               </div>
               <h3 className="text-xl font-black uppercase mb-1">Dr. Sarah Smith</h3>
@@ -30,15 +30,15 @@ export default function Mentorship() {
               </p>
 
               <div className="flex gap-2 mb-6 flex-wrap justify-center">
-                <Badge variant="secondary" className="border-2 border-black">Leadership</Badge>
-                <Badge variant="secondary" className="border-2 border-black">Technology</Badge>
+                <Badge variant="secondary" className="border-2 border-border">Leadership</Badge>
+                <Badge variant="secondary" className="border-2 border-border">Technology</Badge>
               </div>
 
               <div className="flex gap-2 w-full mt-auto">
-                <Button className="flex-1 border-2 border-black font-bold bg-accent text-white hover:bg-accent/90">
+                <Button className="flex-1 border-2 border-border font-bold bg-accent text-white hover:bg-accent/90">
                   <MessageCircle className="mr-2 h-4 w-4" /> Chat
                 </Button>
-                <Button variant="outline" className="flex-1 border-2 border-black font-bold">
+                <Button variant="outline" className="flex-1 border-2 border-border font-bold">
                   <Calendar className="mr-2 h-4 w-4" /> Book
                 </Button>
               </div>

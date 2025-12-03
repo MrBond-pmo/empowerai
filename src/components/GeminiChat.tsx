@@ -50,8 +50,8 @@ export function GeminiChat() {
 
   return (
     <div className="neo-card h-[500px] flex flex-col bg-background overflow-hidden">
-      <div className="bg-primary p-4 border-b-4 border-black flex items-center gap-3">
-        <div className="bg-white p-2 rounded-full border-2 border-black">
+      <div className="bg-primary p-4 border-b-4 border-border flex items-center gap-3">
+        <div className="bg-white p-2 rounded-full border-2 border-border">
           <Sparkles className="h-5 w-5 text-primary" />
         </div>
         <div>
@@ -65,10 +65,10 @@ export function GeminiChat() {
           {messages.map((msg, i) => (
             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               <div className={`flex gap-2 max-w-[80%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                <div className={`h-8 w-8 rounded-full border-2 border-black flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-accent' : 'bg-secondary'}`}>
+                <div className={`h-8 w-8 rounded-full border-2 border-border flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-accent' : 'bg-secondary'}`}>
                   {msg.role === 'user' ? <User className="h-4 w-4 text-white" /> : <Bot className="h-4 w-4 text-black" />}
                 </div>
-                <div className={`p-3 rounded-lg border-2 border-black font-medium text-sm ${msg.role === 'user' ? 'bg-accent text-white' : 'bg-secondary text-black'}`}>
+                <div className={`p-3 rounded-lg border-2 border-border font-medium text-sm ${msg.role === 'user' ? 'bg-accent text-white' : 'bg-secondary text-black'}`}>
                   {msg.content}
                 </div>
               </div>
@@ -77,10 +77,10 @@ export function GeminiChat() {
           {isLoading && (
             <div className="flex justify-start">
               <div className="flex gap-2 max-w-[80%] flex-row">
-                <div className="h-8 w-8 rounded-full border-2 border-black flex items-center justify-center shrink-0 bg-secondary">
+                <div className="h-8 w-8 rounded-full border-2 border-border flex items-center justify-center shrink-0 bg-secondary">
                   <Bot className="h-4 w-4 text-black" />
                 </div>
-                <div className="p-3 rounded-lg border-2 border-black font-medium text-sm bg-secondary text-black animate-pulse">
+                <div className="p-3 rounded-lg border-2 border-border font-medium text-sm bg-secondary text-black animate-pulse">
                   Thinking...
                 </div>
               </div>
@@ -89,17 +89,17 @@ export function GeminiChat() {
         </div>
       </ScrollArea>
 
-      <div className="p-4 border-t-4 border-black bg-card">
+      <div className="p-4 border-t-4 border-border bg-card">
         <div className="flex gap-2">
           <Input 
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Ask about careers, skills, or safety..."
-            className="border-2 border-black focus-visible:ring-0 font-bold"
+            className="border-2 border-border focus-visible:ring-0 font-bold"
             disabled={isLoading}
           />
-          <Button onClick={handleSend} disabled={isLoading} className="bg-black text-white hover:bg-black/80 border-2 border-black">
+          <Button onClick={handleSend} disabled={isLoading} className="bg-black text-white hover:bg-black/80 border-2 border-border">
             <Send className="h-4 w-4" />
           </Button>
         </div>

@@ -103,12 +103,12 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
       {/* Auth Content */}
       <div className="flex-1 flex items-center justify-center p-4">
         <div className="flex items-center justify-center h-full flex-col w-full max-w-md">
-        <Card className="w-full pb-0 border-4 border-black neo-shadow bg-card">
+        <Card className="w-full pb-0 border-4 border-border neo-shadow bg-card">
           {step === "signIn" ? (
             <>
               <CardHeader className="text-center">
               <div className="flex justify-center mb-4">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary border-4 border-black cursor-pointer" onClick={() => navigate("/")}>
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary border-4 border-border cursor-pointer" onClick={() => navigate("/")}>
                       <Shield className="h-8 w-8 text-white" />
                     </div>
                   </div>
@@ -127,14 +127,14 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                         name="email"
                         placeholder="name@example.com"
                         type="email"
-                        className="pl-9 border-2 border-black font-bold"
+                        className="pl-9 border-2 border-border font-bold"
                         disabled={isLoading}
                         required
                       />
                     </div>
                     <Button
                       type="submit"
-                      className="bg-primary text-white border-2 border-black hover:bg-primary/90"
+                      className="bg-primary text-white border-2 border-border hover:bg-primary/90"
                       size="icon"
                       disabled={isLoading}
                     >
@@ -152,7 +152,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                   <div className="mt-6">
                     <div className="relative">
                       <div className="absolute inset-0 flex items-center">
-                        <span className="w-full border-t-2 border-black" />
+                        <span className="w-full border-t-2 border-border" />
                       </div>
                       <div className="relative flex justify-center text-xs uppercase font-black">
                         <span className="bg-card px-2 text-muted-foreground">
@@ -164,7 +164,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                     <Button
                       type="button"
                       variant="outline"
-                      className="w-full mt-6 border-2 border-black font-bold hover:bg-accent hover:text-white"
+                      className="w-full mt-6 border-2 border-border font-bold hover:bg-accent hover:text-white"
                       onClick={handleGuestLogin}
                       disabled={isLoading}
                     >
@@ -206,7 +206,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                     >
                       <InputOTPGroup>
                         {Array.from({ length: 6 }).map((_, index) => (
-                          <InputOTPSlot key={index} index={index} className="border-2 border-black font-bold h-12 w-10" />
+                          <InputOTPSlot key={index} index={index} className="border-2 border-border font-bold h-12 w-10" />
                         ))}
                       </InputOTPGroup>
                     </InputOTP>
@@ -230,7 +230,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                 <CardFooter className="flex-col gap-2">
                   <Button
                     type="submit"
-                    className="w-full bg-primary text-white border-2 border-black font-bold hover:bg-primary/90"
+                    className="w-full bg-primary text-white border-2 border-border font-bold hover:bg-primary/90"
                     disabled={isLoading || otp.length !== 6}
                   >
                     {isLoading ? (
@@ -259,7 +259,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
             </>
           )}
 
-          <div className="py-4 px-6 text-xs text-center text-muted-foreground bg-muted border-t-4 border-black font-bold">
+          <div className="py-4 px-6 text-xs text-center text-muted-foreground bg-muted border-t-4 border-border font-bold">
             Secured by{" "}
             <a
               href="https://vly.ai"

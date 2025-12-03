@@ -29,7 +29,7 @@ export default function Dashboard() {
                   <Button className="bg-black text-white border-2 border-white hover:bg-black/80 font-bold">
                     Resume Learning
                   </Button>
-                  <Button variant="outline" className="bg-transparent border-2 border-black font-bold">
+                  <Button variant="outline" className="bg-transparent border-2 border-border font-bold">
                     View Profile
                   </Button>
                 </div>
@@ -84,12 +84,12 @@ export default function Dashboard() {
                         <h3 className="text-xl font-black">Senior UX Designer</h3>
                         <p className="text-sm font-bold text-muted-foreground mb-2">TechCorp Solutions • Remote</p>
                         <div className="flex gap-2 mb-4">
-                          <Badge variant="outline" className="border-2 border-black font-bold bg-secondary/20">Full-time</Badge>
-                          <Badge variant="outline" className="border-2 border-black font-bold bg-accent/20">Design</Badge>
-                          <Badge variant="outline" className="border-2 border-black font-bold bg-primary/20">Women Friendly</Badge>
+                          <Badge variant="outline" className="border-2 border-border font-bold bg-secondary/20">Full-time</Badge>
+                          <Badge variant="outline" className="border-2 border-border font-bold bg-accent/20">Design</Badge>
+                          <Badge variant="outline" className="border-2 border-border font-bold bg-primary/20">Women Friendly</Badge>
                         </div>
                       </div>
-                      <Button size="sm" className="border-2 border-black font-bold">Apply Now</Button>
+                      <Button size="sm" className="border-2 border-border font-bold">Apply Now</Button>
                     </div>
                     <div className="flex items-center gap-2 text-xs font-bold text-green-600">
                       <TrendingUp className="h-4 w-4" />
@@ -112,21 +112,21 @@ export default function Dashboard() {
                       <span className="font-black">Advanced React Patterns</span>
                       <span className="font-bold text-primary">75%</span>
                     </div>
-                    <Progress value={75} className="h-4 border-2 border-black bg-muted [&>div]:bg-primary" />
+                    <Progress value={75} className="h-4 border-2 border-border bg-muted [&>div]:bg-primary" />
                   </div>
                   <div>
                     <div className="flex justify-between mb-2">
                       <span className="font-black">UI/UX Fundamentals</span>
                       <span className="font-bold text-secondary">40%</span>
                     </div>
-                    <Progress value={40} className="h-4 border-2 border-black bg-muted [&>div]:bg-secondary" />
+                    <Progress value={40} className="h-4 border-2 border-border bg-muted [&>div]:bg-secondary" />
                   </div>
                   <div>
                     <div className="flex justify-between mb-2">
                       <span className="font-black">AI for Designers</span>
                       <span className="font-bold text-accent">10%</span>
                     </div>
-                    <Progress value={10} className="h-4 border-2 border-black bg-muted [&>div]:bg-accent" />
+                    <Progress value={10} className="h-4 border-2 border-border bg-muted [&>div]:bg-accent" />
                   </div>
                 </div>
               </div>
@@ -141,9 +141,9 @@ export default function Dashboard() {
             <div className="neo-card p-6 bg-purple-100 text-black">
               <h3 className="font-black text-lg uppercase mb-4">Upcoming Mentorship</h3>
               <div className="space-y-4">
-                <div className="bg-white border-2 border-black p-4 rounded-lg">
+                <div className="bg-white border-2 border-border p-4 rounded-lg">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
+                    <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-border"></div>
                     <div>
                       <p className="font-black text-sm">Sarah Connor</p>
                       <p className="text-xs font-bold text-gray-500">Tech Lead @ Skynet</p>
@@ -152,7 +152,7 @@ export default function Dashboard() {
                   <div className="flex items-center gap-2 text-xs font-bold mb-3">
                     <Clock className="h-3 w-3" /> Today, 4:00 PM
                   </div>
-                  <Button size="sm" className="w-full border-2 border-black font-bold bg-purple-500 text-white hover:bg-purple-600">
+                  <Button size="sm" className="w-full border-2 border-border font-bold bg-purple-500 text-white hover:bg-purple-600">
                     Join Meeting
                   </Button>
                 </div>
@@ -162,7 +162,7 @@ export default function Dashboard() {
             <div className="neo-card p-6 bg-yellow-100 text-black">
               <h3 className="font-black text-lg uppercase mb-4">Daily Challenge</h3>
               <p className="text-sm font-bold mb-4">Complete the "Accessibility in Design" quiz to earn 50 points.</p>
-              <Button variant="outline" className="w-full border-2 border-black font-bold bg-white hover:bg-gray-50">
+              <Button variant="outline" className="w-full border-2 border-border font-bold bg-white hover:bg-gray-50">
                 Start Quiz
               </Button>
             </div>

@@ -6,7 +6,7 @@ export function Features() {
   const { t } = useLanguage();
 
   return (
-    <section id="skills" className="py-20 bg-card border-y-4 border-black">
+    <section id="skills" className="py-20 bg-card border-y-4 border-border">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">{t.sections.poweredBy} <span className="text-primary">Gemini 2.5 Flash</span></h2>
@@ -18,7 +18,7 @@ export function Features() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="neo-card bg-background hover:bg-secondary/10 transition-colors">
             <CardContent className="p-8">
-              <div className="h-12 w-12 bg-primary rounded-lg border-2 border-black flex items-center justify-center mb-6">
+              <div className="h-12 w-12 bg-primary rounded-lg border-2 border-border flex items-center justify-center mb-6">
                 <Sparkles className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-2xl font-black uppercase mb-4">Personalized Learning</h3>
@@ -35,7 +35,7 @@ export function Features() {
 
           <Card className="neo-card bg-background hover:bg-accent/10 transition-colors md:-mt-8">
             <CardContent className="p-8">
-              <div className="h-12 w-12 bg-accent rounded-lg border-2 border-black flex items-center justify-center mb-6">
+              <div className="h-12 w-12 bg-accent rounded-lg border-2 border-border flex items-center justify-center mb-6">
                 <Briefcase className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-2xl font-black uppercase mb-4">Career Guidance</h3>
@@ -52,7 +52,7 @@ export function Features() {
 
           <Card className="neo-card bg-background hover:bg-yellow-400/10 transition-colors">
             <CardContent className="p-8">
-              <div className="h-12 w-12 bg-yellow-400 rounded-lg border-2 border-black flex items-center justify-center mb-6">
+              <div className="h-12 w-12 bg-yellow-400 rounded-lg border-2 border-border flex items-center justify-center mb-6">
                 <Shield className="h-6 w-6 text-black" />
               </div>
               <h3 className="text-2xl font-black uppercase mb-4">Safety Intelligence</h3>

@@ -15,7 +15,7 @@ export function Testimonials() {
             </div>
             <p className="font-bold text-lg mb-6">"After my career break, I felt lost. EmpowerAI's personalized path helped me learn Python in Tamil, and I landed a remote job last month!"</p>
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
+              <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-border"></div>
               <div>
                 <p className="font-black">Kavitha M.</p>
                 <p className="text-xs font-bold text-muted-foreground">Chennai, India</p>
@@ -28,7 +28,7 @@ export function Testimonials() {
             </div>
             <p className="font-bold text-lg mb-6">"The safety feature is a game changer. I travel late for work, and having the AI companion monitor my journey gives me so much peace of mind."</p>
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
+              <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-border"></div>
               <div>
                 <p className="font-black">Sneha P.</p>
                 <p className="text-xs font-bold text-muted-foreground">Bangalore, India</p>
@@ -41,7 +41,7 @@ export function Testimonials() {
             </div>
             <p className="font-bold text-lg mb-6">"I found an amazing mentor who guided me through starting my own business. The vernacular support made it so easy to connect."</p>
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
+              <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-border"></div>
               <div>
                 <p className="font-black">Lakshmi S.</p>
                 <p className="text-xs font-bold text-muted-foreground">Hyderabad, India</p>

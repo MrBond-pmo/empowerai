@@ -23,10 +23,10 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b-4 border-black bg-background neo-shadow-sm">
+    <nav className="sticky top-0 z-50 w-full border-b-4 border-border bg-background neo-shadow-sm">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/")}>
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary border-2 border-black">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary border-2 border-border">
             <Shield className="h-6 w-6 text-white" />
           </div>
           <span className="text-2xl font-black tracking-tighter uppercase">Mahile<span className="text-primary">AI</span></span>
@@ -42,12 +42,12 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="border-2 border-black font-bold hidden sm:flex gap-2">
+              <Button variant="outline" className="border-2 border-border font-bold hidden sm:flex gap-2">
                 <Globe className="h-4 w-4" />
                 {languages.find(l => l.code === language)?.name}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="border-2 border-black font-bold bg-card">
+            <DropdownMenuContent align="end" className="border-2 border-border font-bold bg-card">
               {languages.map((lang) => (
                 <DropdownMenuItem 
                   key={lang.code} 
@@ -67,7 +67,7 @@ export function Navbar() {
             <User className="mr-2 h-4 w-4" /> {t.nav.login}
           </Button>
 
-          <Button variant="ghost" size="icon" className="md:hidden border-2 border-black">
+          <Button variant="ghost" size="icon" className="md:hidden border-2 border-border">
             <Menu className="h-6 w-6" />
           </Button>
         </div>

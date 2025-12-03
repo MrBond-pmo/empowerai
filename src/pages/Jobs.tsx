@@ -23,7 +23,7 @@ export default function Jobs() {
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="text-2xl font-black uppercase">Senior UX Designer</h3>
-                    <Badge className="bg-green-500 text-white border-2 border-black">95% Match</Badge>
+                    <Badge className="bg-green-500 text-white border-2 border-border">95% Match</Badge>
                   </div>
                   <p className="text-lg font-bold mb-4">TechCorp Solutions</p>
                   
@@ -40,15 +40,15 @@ export default function Jobs() {
                   </div>
 
                   <div className="flex gap-2">
-                    <Badge variant="outline" className="border-2 border-black font-bold">Figma</Badge>
-                    <Badge variant="outline" className="border-2 border-black font-bold">React</Badge>
-                    <Badge variant="outline" className="border-2 border-black font-bold">User Research</Badge>
+                    <Badge variant="outline" className="border-2 border-border font-bold">Figma</Badge>
+                    <Badge variant="outline" className="border-2 border-border font-bold">React</Badge>
+                    <Badge variant="outline" className="border-2 border-border font-bold">User Research</Badge>
                   </div>
                 </div>
 
                 <div className="flex flex-col justify-center gap-2 min-w-[150px]">
                   <Button className="neo-button w-full">Apply Now</Button>
-                  <Button variant="outline" className="border-2 border-black font-bold w-full">Save Job</Button>
+                  <Button variant="outline" className="border-2 border-border font-bold w-full">Save Job</Button>
                 </div>
               </div>
             </div>

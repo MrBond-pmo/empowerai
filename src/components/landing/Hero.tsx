@@ -21,7 +21,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-          <Badge className="bg-accent text-white border-2 border-black px-4 py-1 text-sm font-black uppercase tracking-wider neo-shadow-sm">
+          <Badge className="bg-accent text-white border-2 border-border px-4 py-1 text-sm font-black uppercase tracking-wider neo-shadow-sm">
             {t.hero.badge}
           </Badge>
           <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter uppercase">
@@ -41,7 +41,7 @@ export function Hero() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-4 border-black text-lg h-16 font-bold neo-shadow hover:bg-accent hover:text-white transition-all"
+              className="border-4 border-border text-lg h-16 font-bold neo-shadow hover:bg-accent hover:text-white transition-all"
             >
               <Bot className="mr-2 h-5 w-5" /> {t.hero.talkToAI}
             </Button>
@@ -83,7 +83,7 @@ export function Hero() {
           
           {/* Decorative elements */}
           <div className="absolute -top-10 -right-10 w-20 h-20 bg-black rounded-full border-4 border-white z-0"></div>
-          <div className="absolute -bottom-5 -left-5 w-16 h-16 bg-primary rounded-full border-4 border-black z-20"></div>
+          <div className="absolute -bottom-5 -left-5 w-16 h-16 bg-primary rounded-full border-4 border-border z-20"></div>
         </motion.div>
       </div>
     </section>

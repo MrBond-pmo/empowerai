@@ -21,10 +21,10 @@ export default function Skills() {
           <Card className="neo-card bg-card">
             <CardContent className="p-6">
               <div className="flex justify-between items-start mb-4">
-                <div className="bg-primary/10 p-3 rounded-lg border-2 border-black">
+                <div className="bg-primary/10 p-3 rounded-lg border-2 border-border">
                   <BookOpen className="h-8 w-8 text-primary" />
                 </div>
-                <div className="flex items-center gap-1 bg-yellow-400 px-2 py-1 rounded border-2 border-black font-bold text-xs">
+                <div className="flex items-center gap-1 bg-yellow-400 px-2 py-1 rounded border-2 border-border font-bold text-xs">
                   <Star className="h-3 w-3 fill-black" /> 4.8
                 </div>
               </div>
@@ -37,7 +37,7 @@ export default function Skills() {
                   <span>Progress</span>
                   <span>45%</span>
                 </div>
-                <Progress value={45} className="h-3 border-2 border-black" />
+                <Progress value={45} className="h-3 border-2 border-border" />
               </div>
               <Button className="w-full neo-button">Continue Learning</Button>
             </CardContent>
@@ -46,10 +46,10 @@ export default function Skills() {
           <Card className="neo-card bg-card">
             <CardContent className="p-6">
               <div className="flex justify-between items-start mb-4">
-                <div className="bg-secondary/10 p-3 rounded-lg border-2 border-black">
+                <div className="bg-secondary/10 p-3 rounded-lg border-2 border-border">
                   <BookOpen className="h-8 w-8 text-secondary" />
                 </div>
-                <div className="flex items-center gap-1 bg-yellow-400 px-2 py-1 rounded border-2 border-black font-bold text-xs">
+                <div className="flex items-center gap-1 bg-yellow-400 px-2 py-1 rounded border-2 border-border font-bold text-xs">
                   <Star className="h-3 w-3 fill-black" /> 4.9
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function Skills() {
                   <span>Progress</span>
                   <span>12%</span>
                 </div>
-                <Progress value={12} className="h-3 border-2 border-black" />
+                <Progress value={12} className="h-3 border-2 border-border" />
               </div>
               <Button className="w-full neo-button">Continue Learning</Button>
             </CardContent>
@@ -71,10 +71,10 @@ export default function Skills() {
           <Card className="neo-card bg-card">
             <CardContent className="p-6">
               <div className="flex justify-between items-start mb-4">
-                <div className="bg-accent/10 p-3 rounded-lg border-2 border-black">
+                <div className="bg-accent/10 p-3 rounded-lg border-2 border-border">
                   <BookOpen className="h-8 w-8 text-accent" />
                 </div>
-                <div className="flex items-center gap-1 bg-yellow-400 px-2 py-1 rounded border-2 border-black font-bold text-xs">
+                <div className="flex items-center gap-1 bg-yellow-400 px-2 py-1 rounded border-2 border-border font-bold text-xs">
                   <Star className="h-3 w-3 fill-black" /> 4.7
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function Skills() {
                   <span>Progress</span>
                   <span>0%</span>
                 </div>
-                <Progress value={0} className="h-3 border-2 border-black" />
+                <Progress value={0} className="h-3 border-2 border-border" />
               </div>
               <Button className="w-full neo-button">Start Course</Button>
             </CardContent>
