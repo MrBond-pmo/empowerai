@@ -6,29 +6,43 @@ import { useState } from "react";
 import { useAction } from "convex/react";
 import { api } from "@/convex/_generated/api";
 
+type Message = {
+  role: "user" | "assistant";
+  content: string;
+};
+
 export function GeminiChat() {
-  const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hi! I'm your AI Career & Safety Assistant powered by Gemini 2.5 Flash. How can I help you today?" }
+  const [messages, setMessages] = useState<Message[]>([
+    { role: "assistant", content: "Hi! I'm MahileAI, your Career & Safety Assistant. How can I help you today?" }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  
-  const sendMessage = useAction(api.gemini.chat);
+  const chatAction = useAction(api.gemini.sendMessage);
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
     
-    const userMessage = input;
+    const userMessage: Message = { role: "user", content: input };
+    const newMessages = [...messages, userMessage];
+    
+    setMessages(newMessages);
     setInput("");
-    setMessages(prev => [...prev, { role: "user", content: userMessage }]);
     setIsLoading(true);
 
     try {
-      const response = await sendMessage({ message: userMessage });
-      setMessages(prev => [...prev, { role: "assistant", content: response }]);
+      // Call the Convex action
+      const response = await chatAction({ messages: newMessages });
+      
+      setMessages([
+        ...newMessages,
+        { role: "assistant", content: response }
+      ]);
     } catch (error) {
-      console.error("Failed to send message:", error);
-      setMessages(prev => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting right now. Please try again." }]);
+      console.error("Failed to get AI response:", error);
+      setMessages([
+        ...newMessages,
+        { role: "assistant", content: "Sorry, I'm having trouble connecting right now. Please try again later." }
+      ]);
     } finally {
       setIsLoading(false);
     }

@@ -10,7 +10,7 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary border-2 border-black">
                 <Shield className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-black tracking-tighter uppercase">Empower<span className="text-primary">AI</span></span>
+              <span className="text-xl font-black tracking-tighter uppercase">Mahile<span className="text-primary">AI</span></span>
             </div>
             <p className="text-sm font-medium max-w-xs">
               A unified AI platform dedicated to women's empowerment through skills, careers, mentorship, and safety.
@@ -57,7 +57,7 @@ export function Footer() {
               Powered by Gemini 2.5 Flash. We prioritize data privacy and ethical AI use.
             </p>
             <div className="text-xs font-bold text-muted-foreground">
-              © 2024 EmpowerAI. All rights reserved.
+              © 2024 MahileAI. All rights reserved.
             </div>
           </div>
         </div>
