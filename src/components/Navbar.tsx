@@ -65,9 +65,9 @@ export function Navbar() {
 
           <Button 
             className="neo-button hidden sm:flex bg-accent text-black hover:bg-accent/90"
-            onClick={() => navigate(isAuthenticated ? "/dashboard" : "/auth")}
+            onClick={() => navigate("/auth")}
           >
-            <User className="mr-2 h-4 w-4" /> {isAuthenticated ? "Dashboard" : t.nav.login}
+            <User className="mr-2 h-4 w-4" /> {t.nav.login}
           </Button>
 
           <Sheet>
@@ -85,9 +85,9 @@ export function Navbar() {
                 <div className="h-1 bg-border my-2"></div>
                 <Button 
                   className="neo-button bg-accent text-black hover:bg-accent/90 w-full justify-start"
-                  onClick={() => navigate(isAuthenticated ? "/dashboard" : "/auth")}
+                  onClick={() => navigate("/auth")}
                 >
-                  <User className="mr-2 h-4 w-4" /> {isAuthenticated ? "Dashboard" : t.nav.login}
+                  <User className="mr-2 h-4 w-4" /> {t.nav.login}
                 </Button>
               </div>
             </SheetContent>

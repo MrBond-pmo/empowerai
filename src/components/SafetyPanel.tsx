@@ -50,17 +50,13 @@ export function SafetyPanel() {
 
             <div className="space-y-2">
               <p className="text-xs font-black uppercase text-muted-foreground">Emergency Contacts</p>
-              <Button asChild variant="outline" className="w-full justify-start border-2 border-black hover:bg-destructive/10 font-bold">
-                <a href="tel:100">
-                  <Phone className="mr-2 h-4 w-4 text-destructive" />
-                  Police (100)
-                </a>
+              <Button variant="outline" className="w-full justify-start border-2 border-black hover:bg-destructive/10 font-bold">
+                <Phone className="mr-2 h-4 w-4 text-destructive" />
+                Police (100)
               </Button>
-              <Button asChild variant="outline" className="w-full justify-start border-2 border-black hover:bg-destructive/10 font-bold">
-                <a href="tel:1091">
-                  <Phone className="mr-2 h-4 w-4 text-destructive" />
-                  Women's Helpline (1091)
-                </a>
+              <Button variant="outline" className="w-full justify-start border-2 border-black hover:bg-destructive/10 font-bold">
+                <Phone className="mr-2 h-4 w-4 text-destructive" />
+                Women's Helpline (1091)
               </Button>
             </div>
           </div>
