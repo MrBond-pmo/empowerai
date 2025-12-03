@@ -8,7 +8,7 @@ export const chat = action({
     const apiKey = process.env.GEMINI_API_KEY;
     
     if (!apiKey) {
-      return "I'm sorry, but the AI API key is not configured. Please add GEMINI_API_KEY to the environment variables.";
+      return "I'm sorry, but the Gemini API key is not configured. Please add GEMINI_API_KEY to the environment variables.";
     }
 
     try {

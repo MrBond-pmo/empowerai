@@ -14,7 +14,7 @@ export default function Safety() {
           <Badge className="mb-4 bg-destructive text-white border-2 border-black">24/7 Support</Badge>
           <h1 className="text-4xl md:text-6xl font-black uppercase mb-4">Safety Intelligence</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-bold">
-            Real-time threat analysis, emergency response, and legal guidance powered by AI.
+            Real-time threat analysis, emergency response, and legal guidance powered by Gemini AI.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function Safety() {
                 </div>
                 <div className="neo-card p-6 bg-card flex items-center gap-4">
                     <div className="h-12 w-12 bg-accent rounded-full border-2 border-black flex items-center justify-center">
-                        <MapPin className="h-6 w-6 text-black" />
+                        <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
                         <h3 className="text-xl font-black uppercase">Safe Route Planner</h3>

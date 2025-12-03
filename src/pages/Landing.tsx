@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Bot, Briefcase, Check, Heart, Shield, Sparkles, User, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Bot, Briefcase, Check, Heart, Shield, Sparkles, Users } from "lucide-react";
 import { useNavigate } from "react-router";
 
 export default function Landing() {
@@ -29,7 +29,7 @@ export default function Landing() {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <Badge className="bg-accent text-black border-2 border-black px-4 py-1 text-sm font-black uppercase tracking-wider neo-shadow-sm">
+            <Badge className="bg-accent text-white border-2 border-black px-4 py-1 text-sm font-black uppercase tracking-wider neo-shadow-sm">
               {t.hero.badge}
             </Badge>
             <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter uppercase">
@@ -65,7 +65,7 @@ export default function Landing() {
           >
             <div className="relative z-10 grid grid-cols-2 gap-4">
               <div className="space-y-4 mt-12">
-                <div className="neo-card bg-secondary text-black p-6 rotate-[-2deg]">
+                <div className="neo-card bg-secondary p-6 rotate-[-2deg]">
                   <Briefcase className="h-8 w-8 mb-2" />
                   <h3 className="font-black text-xl">{t.features.smartJobs}</h3>
                   <p className="text-xs font-bold">Context-aware matching</p>
@@ -77,7 +77,7 @@ export default function Landing() {
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="neo-card bg-accent text-black p-6 rotate-[1deg]">
+                <div className="neo-card bg-accent text-white p-6 rotate-[1deg]">
                   <BookOpen className="h-8 w-8 mb-2" />
                   <h3 className="font-black text-xl">{t.features.upskilling}</h3>
                   <p className="text-xs font-bold">Personalized paths</p>
@@ -101,7 +101,7 @@ export default function Landing() {
       <section id="skills" className="py-20 bg-card border-y-4 border-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">{t.sections.poweredBy} <span className="text-primary">Advanced AI</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">{t.sections.poweredBy} <span className="text-primary">Gemini 2.5 Flash</span></h2>
             <p className="text-xl font-bold text-muted-foreground max-w-2xl mx-auto">
               Our advanced AI engine understands your context, language, and goals to provide hyper-personalized support.
             </p>
@@ -128,7 +128,7 @@ export default function Landing() {
             <Card className="neo-card bg-background hover:bg-accent/10 transition-colors md:-mt-8 cursor-pointer" onClick={() => navigate("/jobs")}>
               <CardContent className="p-8">
                 <div className="h-12 w-12 bg-accent rounded-lg border-2 border-black flex items-center justify-center mb-6">
-                  <Briefcase className="h-6 w-6 text-black" />
+                  <Briefcase className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-black uppercase mb-4">{t.features.smartJobs}</h3>
                 <p className="font-medium text-muted-foreground mb-6">
@@ -167,15 +167,15 @@ export default function Landing() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="flex-1 space-y-6">
-              <h2 className="text-4xl md:text-5xl font-black uppercase">{t.sections.ready} <span className="text-black bg-secondary px-2 rounded-lg">{t.features.mentorship}</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black uppercase">{t.sections.ready} <span className="text-secondary bg-secondary/10 px-2 rounded-lg">{t.features.mentorship}</span></h2>
               <p className="text-xl font-bold text-muted-foreground">
                 Connect with women leaders who have walked your path. Our AI matches you based on industry, language, and shared experiences.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Tech</Badge>
-                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Business</Badge>
-                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Arts</Badge>
-                <Badge className="bg-white text-black border-2 border-black text-lg py-2 px-4 hover:bg-gray-100">Science</Badge>
+                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Tech</Badge>
+                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Business</Badge>
+                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Arts</Badge>
+                <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Science</Badge>
               </div>
               <Button className="neo-button-secondary mt-4" onClick={() => navigate("/mentorship")}>
                 Find a Mentor
@@ -183,30 +183,22 @@ export default function Landing() {
             </div>
             <div className="flex-1 grid grid-cols-2 gap-4">
               <div className="neo-card p-4 bg-background">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
-                  <User className="h-8 w-8 text-muted-foreground" />
-                </div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
                 <p className="text-center font-black">Dr. Anjali</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">AI Researcher</p>
               </div>
               <div className="neo-card p-4 bg-background mt-8">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
-                  <User className="h-8 w-8 text-muted-foreground" />
-                </div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
                 <p className="text-center font-black">Sarah J.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Product Lead</p>
               </div>
               <div className="neo-card p-4 bg-background">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
-                  <User className="h-8 w-8 text-muted-foreground" />
-                </div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
                 <p className="text-center font-black">Lakshmi R.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Entrepreneur</p>
               </div>
               <div className="neo-card p-4 bg-background mt-8">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
-                  <User className="h-8 w-8 text-muted-foreground" />
-                </div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
                 <p className="text-center font-black">Meera K.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Legal Advisor</p>
               </div>
@@ -251,9 +243,7 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"After my career break, I felt lost. MahileAI's personalized path helped me learn Python in Tamil, and I landed a remote job last month!"</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center">
-                  <User className="h-5 w-5 text-muted-foreground" />
-                </div>
+                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
                 <div>
                   <p className="font-black">Kavitha M.</p>
                   <p className="text-xs font-bold text-muted-foreground">Chennai, India</p>
@@ -266,9 +256,7 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"The safety feature is a game changer. I travel late for work, and having the AI companion monitor my journey gives me so much peace of mind."</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center">
-                  <User className="h-5 w-5 text-muted-foreground" />
-                </div>
+                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
                 <div>
                   <p className="font-black">Sneha P.</p>
                   <p className="text-xs font-bold text-muted-foreground">Bangalore, India</p>
@@ -281,9 +269,7 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"I found an amazing mentor who guided me through starting my own business. The vernacular support made it so easy to connect."</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center">
-                  <User className="h-5 w-5 text-muted-foreground" />
-                </div>
+                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
                 <div>
                   <p className="font-black">Lakshmi S.</p>
                   <p className="text-xs font-bold text-muted-foreground">Hyderabad, India</p>
@@ -295,7 +281,7 @@ export default function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-accent text-black border-t-4 border-black">
+      <section className="py-20 bg-accent text-white border-t-4 border-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black uppercase mb-8">{t.sections.ready}</h2>
           <p className="text-xl font-bold mb-8 max-w-2xl mx-auto">

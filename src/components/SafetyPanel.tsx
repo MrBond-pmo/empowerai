@@ -35,7 +35,7 @@ export function SafetyPanel() {
           <div className="p-4 space-y-4">
             <div className="bg-background border-2 border-black p-3 rounded-lg">
               <p className="text-sm font-bold mb-2">AI Threat Analysis</p>
-              <p className="text-xs text-muted-foreground">Describe your situation or record audio. Our AI will analyze and suggest actions.</p>
+              <p className="text-xs text-muted-foreground">Describe your situation or record audio. Gemini 2.5 Flash will analyze and suggest actions.</p>
             </div>
 
             <div className="flex gap-2">

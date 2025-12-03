@@ -12,7 +12,7 @@ export const translations = {
       title: "Unlock Your Potential With AI",
       subtitle: "A unified platform combining personalized skills, smart job matching, mentorship, and real-time safety intelligence.",
       getStarted: "Get Started",
-      talkToGemini: "Talk to AI",
+      talkToGemini: "Talk to Gemini AI",
     },
     features: {
       smartJobs: "Smart Jobs",
@@ -41,7 +41,7 @@ export const translations = {
       title: "AI மூலம் உங்கள் திறனை வெளிப்படுத்துங்கள்",
       subtitle: "தனிப்பயனாக்கப்பட்ட திறன்கள், வேலை வாய்ப்புகள், வழிகாட்டுதல் மற்றும் பாதுகாப்பு நுண்ணறிவை இணைக்கும் தளம்.",
       getStarted: "தொடங்கவும்",
-      talkToGemini: "AI உடன் பேசுங்கள்",
+      talkToGemini: "ஜெமினி AI உடன் பேசுங்கள்",
     },
     features: {
       smartJobs: "சிறந்த வேலைகள்",
@@ -70,7 +70,7 @@ export const translations = {
       title: "AIతో మీ సామర్థ్యాన్ని అన్‌లాక్ చేయండి",
       subtitle: "వ్యక్తిగతీకరించిన నైపుణ్యాలు, ఉద్యోగ సరిపోలిక, మార్గదర్శకత్వం మరియు నిజ-సమయ భద్రతను మిళితం చేసే వేదిక.",
       getStarted: "ప్రారంభించండి",
-      talkToGemini: "AIతో మాట్లాడండి",
+      talkToGemini: "జెమిని AIతో మాట్లాడండి",
     },
     features: {
       smartJobs: "స్మార్ట్ ఉద్యోగాలు",
@@ -99,7 +99,7 @@ export const translations = {
       title: "AI ನೊಂದಿಗೆ ನಿಮ್ಮ ಸಾಮರ್ಥ್ಯವನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ",
       subtitle: "ವೈಯಕ್ತೀಕರಿಸಿದ ಕೌಶಲ್ಯಗಳು, ಉದ್ಯೋಗ ಹೊಂದಾಣಿಕೆ, ಮಾರ್ಗದರ್ಶನ ಮತ್ತು ನೈಜ-ಸಮಯದ ಸುರಕ್ಷತೆಯನ್ನು ಸಂಯೋಜಿಸುವ ವೇದಿಕೆ.",
       getStarted: "ಪ್ರಾರಂಭಿಸಿ",
-      talkToGemini: "AI ಜೊತೆ ಮಾತನಾಡಿ",
+      talkToGemini: "ಜೆಮಿನಿ AI ಜೊತೆ ಮಾತನಾಡಿ",
     },
     features: {
       smartJobs: "ಸ್ಮಾರ್ಟ್ ಉದ್ಯೋಗಗಳು",
@@ -128,7 +128,7 @@ export const translations = {
       title: "AI ഉപയോഗിച്ച് നിങ്ങളുടെ കഴിവുകൾ ഉയർത്തുക",
       subtitle: "വ്യക്തിഗത കഴിവുകൾ, തൊഴിൽ അവസരങ്ങൾ, മാർഗനിർദേശം, സുരക്ഷ എന്നിവ സംയോജിപ്പിക്കുന്ന പ്ലാറ്റ്‌ഫോം.",
       getStarted: "തുടങ്ങാം",
-      talkToGemini: "AI-യോട് സംസാരിക്കൂ",
+      talkToGemini: "ജെമിനി AI-യോട് സംസാരിക്കൂ",
     },
     features: {
       smartJobs: "സ്മാർട്ട് ജോലികൾ",

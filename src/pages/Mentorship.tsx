@@ -4,7 +4,7 @@ import { SafetyPanel } from "@/components/SafetyPanel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle, User, Users } from "lucide-react";
+import { MessageCircle, Users } from "lucide-react";
 
 export default function Mentorship() {
   return (
@@ -23,8 +23,7 @@ export default function Mentorship() {
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <Card key={i} className="neo-card bg-card text-center hover:-translate-y-2 transition-transform">
               <CardContent className="p-6 pt-8">
-                <div className="h-24 w-24 mx-auto bg-zinc-800 rounded-full border-4 border-black mb-4 relative flex items-center justify-center">
-                    <User className="h-12 w-12 text-muted-foreground" />
+                <div className="h-24 w-24 mx-auto bg-gray-200 rounded-full border-4 border-black mb-4 relative">
                     <div className="absolute bottom-0 right-0 h-6 w-6 bg-green-500 rounded-full border-2 border-black"></div>
                 </div>
                 <h3 className="text-lg font-black uppercase">Dr. Sarah Smith</h3>

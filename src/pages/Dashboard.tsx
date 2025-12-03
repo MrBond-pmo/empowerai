@@ -5,7 +5,7 @@ import { SafetyPanel } from "@/components/SafetyPanel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { BookOpen, Briefcase, CheckCircle, Clock, Target, TrendingUp, Trophy, User } from "lucide-react";
+import { BookOpen, Briefcase, CheckCircle, Clock, Target, TrendingUp, Trophy } from "lucide-react";
 
 export default function Dashboard() {
   return (
@@ -41,7 +41,7 @@ export default function Dashboard() {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="neo-card p-4 bg-accent text-black">
+              <div className="neo-card p-4 bg-accent text-white">
                 <div className="flex justify-between items-start mb-2">
                   <BookOpen className="h-6 w-6" />
                   <span className="text-2xl font-black">12</span>
@@ -143,9 +143,7 @@ export default function Dashboard() {
               <div className="space-y-4">
                 <div className="bg-white border-2 border-black p-4 rounded-lg">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center">
-                      <User className="h-6 w-6 text-muted-foreground" />
-                    </div>
+                    <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
                     <div>
                       <p className="font-black text-sm">Sarah Connor</p>
                       <p className="text-xs font-bold text-gray-500">Tech Lead @ Skynet</p>
@@ -164,7 +162,7 @@ export default function Dashboard() {
             <div className="neo-card p-6 bg-yellow-100 text-black">
               <h3 className="font-black text-lg uppercase mb-4">Daily Challenge</h3>
               <p className="text-sm font-bold mb-4">Complete the "Accessibility in Design" quiz to earn 50 points.</p>
-              <Button variant="outline" className="w-full border-2 border-black font-bold bg-white text-black hover:bg-gray-50">
+              <Button variant="outline" className="w-full border-2 border-black font-bold bg-white hover:bg-gray-50">
                 Start Quiz
               </Button>
             </div>
