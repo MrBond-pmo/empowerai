@@ -29,7 +29,7 @@ export default function Landing() {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <Badge className="bg-accent text-white border-2 border-black px-4 py-1 text-sm font-black uppercase tracking-wider neo-shadow-sm">
+            <Badge className="bg-accent text-black border-2 border-black px-4 py-1 text-sm font-black uppercase tracking-wider neo-shadow-sm">
               {t.hero.badge}
             </Badge>
             <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter uppercase">
@@ -77,7 +77,7 @@ export default function Landing() {
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="neo-card bg-accent text-white p-6 rotate-[1deg]">
+                <div className="neo-card bg-accent text-black p-6 rotate-[1deg]">
                   <BookOpen className="h-8 w-8 mb-2" />
                   <h3 className="font-black text-xl">{t.features.upskilling}</h3>
                   <p className="text-xs font-bold">Personalized paths</p>
@@ -128,7 +128,7 @@ export default function Landing() {
             <Card className="neo-card bg-background hover:bg-accent/10 transition-colors md:-mt-8 cursor-pointer" onClick={() => navigate("/jobs")}>
               <CardContent className="p-8">
                 <div className="h-12 w-12 bg-accent rounded-lg border-2 border-black flex items-center justify-center mb-6">
-                  <Briefcase className="h-6 w-6 text-white" />
+                  <Briefcase className="h-6 w-6 text-black" />
                 </div>
                 <h3 className="text-2xl font-black uppercase mb-4">{t.features.smartJobs}</h3>
                 <p className="font-medium text-muted-foreground mb-6">
@@ -281,7 +281,7 @@ export default function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-accent text-white border-t-4 border-black">
+      <section className="py-20 bg-accent text-black border-t-4 border-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-black uppercase mb-8">{t.sections.ready}</h2>
           <p className="text-xl font-bold mb-8 max-w-2xl mx-auto">

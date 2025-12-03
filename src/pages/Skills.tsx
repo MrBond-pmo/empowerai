@@ -13,7 +13,7 @@ export default function Skills() {
       <Navbar />
       <main className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-accent text-white border-2 border-black">AI-Powered Learning</Badge>
+          <Badge className="mb-4 bg-accent text-black border-2 border-black">AI-Powered Learning</Badge>
           <h1 className="text-4xl md:text-6xl font-black uppercase mb-4">Skill Development</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-bold">
             Personalized learning paths curated by AI to help you reach your career goals.

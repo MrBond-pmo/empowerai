@@ -87,7 +87,7 @@
   --muted: oklch(0.2 0 0);
   --muted-foreground: oklch(0.6 0 0);
   --accent: oklch(0.6 0.2 250); /* #0080FF Blueish */
-  --accent-foreground: oklch(1 0 0);
+  --accent-foreground: oklch(0 0 0);
   --destructive: oklch(0.6 0.25 20);
   --border: oklch(0 0 0); /* Black borders */
   --input: oklch(0.3 0 0);

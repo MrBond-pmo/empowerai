@@ -61,7 +61,7 @@ export function Navbar() {
           </DropdownMenu>
 
           <Button 
-            className="neo-button hidden sm:flex bg-accent text-white hover:bg-accent/90"
+            className="neo-button hidden sm:flex bg-accent text-black hover:bg-accent/90"
             onClick={() => navigate("/auth")}
           >
             <User className="mr-2 h-4 w-4" /> {t.nav.login}

@@ -42,7 +42,7 @@ export default function Safety() {
                 </div>
                 <div className="neo-card p-6 bg-card flex items-center gap-4">
                     <div className="h-12 w-12 bg-accent rounded-full border-2 border-black flex items-center justify-center">
-                        <MapPin className="h-6 w-6 text-white" />
+                        <MapPin className="h-6 w-6 text-black" />
                     </div>
                     <div>
                         <h3 className="text-xl font-black uppercase">Safe Route Planner</h3>

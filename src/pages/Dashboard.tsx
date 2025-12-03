@@ -41,7 +41,7 @@ export default function Dashboard() {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="neo-card p-4 bg-accent text-white">
+              <div className="neo-card p-4 bg-accent text-black">
                 <div className="flex justify-between items-start mb-2">
                   <BookOpen className="h-6 w-6" />
                   <span className="text-2xl font-black">12</span>

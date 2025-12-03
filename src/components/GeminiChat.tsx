@@ -61,9 +61,9 @@ export function GeminiChat() {
             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               <div className={`flex gap-2 max-w-[80%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
                 <div className={`h-8 w-8 rounded-full border-2 border-black flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-accent' : 'bg-secondary'}`}>
-                  {msg.role === 'user' ? <User className="h-4 w-4 text-white" /> : <Bot className="h-4 w-4 text-black" />}
+                  {msg.role === 'user' ? <User className="h-4 w-4 text-black" /> : <Bot className="h-4 w-4 text-black" />}
                 </div>
-                <div className={`p-3 rounded-lg border-2 border-black font-medium text-sm ${msg.role === 'user' ? 'bg-accent text-white' : 'bg-secondary text-black'}`}>
+                <div className={`p-3 rounded-lg border-2 border-black font-medium text-sm ${msg.role === 'user' ? 'bg-accent text-black' : 'bg-secondary text-black'}`}>
                   {msg.content}
                 </div>
               </div>
