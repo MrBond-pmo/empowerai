@@ -1,5 +1,4 @@
 import { Facebook, Instagram, Linkedin, Shield, Twitter } from "lucide-react";
-import { Link } from "react-router";
 
 export function Footer() {
   return (
@@ -35,10 +34,10 @@ export function Footer() {
           <div>
             <h3 className="font-black text-lg mb-4 uppercase">Platform</h3>
             <ul className="space-y-2 font-medium">
-              <li><Link to="/skills" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Skill Development</Link></li>
-              <li><Link to="/jobs" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Career Guidance</Link></li>
-              <li><Link to="/mentorship" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Mentorship Hub</Link></li>
-              <li><Link to="/safety" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Safety Intelligence</Link></li>
+              <li><a href="#skills" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Skill Development</a></li>
+              <li><a href="#jobs" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Career Guidance</a></li>
+              <li><a href="#mentorship" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Mentorship Hub</a></li>
+              <li><a href="#safety" className="hover:text-primary hover:underline decoration-2 underline-offset-2">Safety Intelligence</a></li>
             </ul>
           </div>
 
