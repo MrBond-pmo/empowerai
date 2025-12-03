@@ -267,7 +267,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
               rel="noopener noreferrer"
               className="underline hover:text-primary transition-colors"
             >
-              MahileAI
+              vly.ai
             </a>
           </div>
         </Card>

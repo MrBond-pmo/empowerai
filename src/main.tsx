@@ -12,11 +12,6 @@ import "./index.css";
 import Landing from "./pages/Landing.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import "./types/global.d.ts";
-import { LanguageProvider } from "@/context/LanguageContext";
-import Skills from "@/pages/Skills";
-import Jobs from "@/pages/Jobs";
-import Mentorship from "@/pages/Mentorship";
-import Safety from "@/pages/Safety";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
 
@@ -48,22 +43,16 @@ createRoot(document.getElementById("root")!).render(
     <VlyToolbar />
     <InstrumentationProvider>
       <ConvexAuthProvider client={convex}>
-        <LanguageProvider>
-          <BrowserRouter>
-            <RouteSyncer />
-            <Routes>
-              <Route path="/" element={<Landing />} />
-              <Route path="/auth" element={<AuthPage redirectAfterAuth="/dashboard" />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/jobs" element={<Jobs />} />
-              <Route path="/mentorship" element={<Mentorship />} />
-              <Route path="/safety" element={<Safety />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-          <Toaster />
-        </LanguageProvider>
+        <BrowserRouter>
+          <RouteSyncer />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/auth" element={<AuthPage redirectAfterAuth="/dashboard" />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+        <Toaster />
       </ConvexAuthProvider>
     </InstrumentationProvider>
   </StrictMode>,
