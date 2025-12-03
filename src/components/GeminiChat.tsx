@@ -3,30 +3,35 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Bot, Send, Sparkles, User } from "lucide-react";
 import { useState } from "react";
+import { useAction } from "convex/react";
+import { api } from "@/convex/_generated/api";
 
 export function GeminiChat() {
   const [messages, setMessages] = useState([
     { role: "assistant", content: "Hi! I'm your AI Career & Safety Assistant powered by Gemini 2.5 Flash. How can I help you today?" }
   ]);
   const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const sendMessage = useAction(api.gemini.chat);
 
-  const handleSend = () => {
-    if (!input.trim()) return;
+  const handleSend = async () => {
+    if (!input.trim() || isLoading) return;
     
-    const newMessages = [
-      ...messages,
-      { role: "user", content: input }
-    ];
-    setMessages(newMessages);
+    const userMessage = input;
     setInput("");
+    setMessages(prev => [...prev, { role: "user", content: userMessage }]);
+    setIsLoading(true);
 
-    // Simulate AI response
-    setTimeout(() => {
-      setMessages([
-        ...newMessages,
-        { role: "assistant", content: "I'm analyzing your request using my advanced context awareness. Here are some personalized recommendations based on your profile..." }
-      ]);
-    }, 1000);
+    try {
+      const response = await sendMessage({ message: userMessage });
+      setMessages(prev => [...prev, { role: "assistant", content: response }]);
+    } catch (error) {
+      console.error("Failed to send message:", error);
+      setMessages(prev => [...prev, { role: "assistant", content: "Sorry, I'm having trouble connecting right now. Please try again." }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -55,6 +60,18 @@ export function GeminiChat() {
               </div>
             </div>
           ))}
+          {isLoading && (
+            <div className="flex justify-start">
+              <div className="flex gap-2 max-w-[80%] flex-row">
+                <div className="h-8 w-8 rounded-full border-2 border-black flex items-center justify-center shrink-0 bg-secondary">
+                  <Bot className="h-4 w-4 text-black" />
+                </div>
+                <div className="p-3 rounded-lg border-2 border-black font-medium text-sm bg-secondary text-black animate-pulse">
+                  Thinking...
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </ScrollArea>
 
@@ -66,8 +83,9 @@ export function GeminiChat() {
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Ask about careers, skills, or safety..."
             className="border-2 border-black focus-visible:ring-0 font-bold"
+            disabled={isLoading}
           />
-          <Button onClick={handleSend} className="bg-black text-white hover:bg-black/80 border-2 border-black">
+          <Button onClick={handleSend} disabled={isLoading} className="bg-black text-white hover:bg-black/80 border-2 border-black">
             <Send className="h-4 w-4" />
           </Button>
         </div>

@@ -1,0 +1,155 @@
+export const translations = {
+  en: {
+    nav: {
+      skills: "Skills",
+      jobs: "Jobs",
+      mentorship: "Mentorship",
+      safety: "Safety",
+      login: "Login",
+    },
+    hero: {
+      badge: "AI for Women's Empowerment",
+      title: "Unlock Your",
+      potential: "Potential",
+      subtitle: "A unified platform combining personalized skills, smart job matching, mentorship, and real-time safety intelligence.",
+      getStarted: "Get Started",
+      talkToAI: "Talk to AI",
+    },
+    features: {
+      smartJobs: "Smart Jobs",
+      safetyFirst: "Safety First",
+      upskilling: "Upskilling",
+      mentorship: "Mentorship",
+    },
+    sections: {
+      poweredBy: "Powered by",
+      impact: "Our Impact",
+      community: "Community Voices",
+      ready: "Ready to Take Charge?",
+      join: "Join MahileAI Now",
+    },
+  },
+  ta: {
+    nav: {
+      skills: "திறன்கள்",
+      jobs: "வேலைகள்",
+      mentorship: "வழிகாட்டுதல்",
+      safety: "பாதுகாப்பு",
+      login: "உள்நுழைய",
+    },
+    hero: {
+      badge: "பெண்கள் மேம்பாட்டிற்கான AI",
+      title: "உங்கள் திறமையை",
+      potential: "வெளிக்கொணருங்கள்",
+      subtitle: "தனிப்பயனாக்கப்பட்ட திறன்கள், வேலை வாய்ப்புகள், வழிகாட்டுதல் மற்றும் பாதுகாப்பு நுண்ணறிவை இணைக்கும் தளம்.",
+      getStarted: "தொடங்கவும்",
+      talkToAI: "AI உடன் பேசுங்கள்",
+    },
+    features: {
+      smartJobs: "சிறந்த வேலைகள்",
+      safetyFirst: "பாதுகாப்பு முதலில்",
+      upskilling: "திறன் மேம்பாடு",
+      mentorship: "வழிகாட்டுதல்",
+    },
+    sections: {
+      poweredBy: "மூலம் இயங்குகிறது",
+      impact: "எங்கள் தாக்கம்",
+      community: "சமூக குரல்கள்",
+      ready: "பொறுப்பேற்க தயாரா?",
+      join: "இப்போதே இணையுங்கள்",
+    },
+  },
+  te: {
+    nav: {
+      skills: "నైపుణ్యాలు",
+      jobs: "ఉద్యోగాలు",
+      mentorship: "మార్గదర్శకత్వం",
+      safety: "భద్రత",
+      login: "లాగిన్",
+    },
+    hero: {
+      badge: "మహిళా సాధికారత కోసం AI",
+      title: "మీ సామర్థ్యాన్ని",
+      potential: "వెలికితీయండి",
+      subtitle: "వ్యక్తిగతీకరించిన నైపుణ్యాలు, ఉద్యోగ అవకాశాలు, మార్గదర్శకత్వం మరియు భద్రతను మిళితం చేసే వేదిక.",
+      getStarted: "ప్రారంభించండి",
+      talkToAI: "AIతో మాట్లాడండి",
+    },
+    features: {
+      smartJobs: "స్మార్ట్ ఉద్యోగాలు",
+      safetyFirst: "భద్రత ముఖ్యం",
+      upskilling: "నైపుణ్యాభివృద్ధి",
+      mentorship: "మార్గదర్శకత్వం",
+    },
+    sections: {
+      poweredBy: "ద్వారా ఆధారితం",
+      impact: "మా ప్రభావం",
+      community: "కమ్యూనిటీ స్వరాలు",
+      ready: "బాధ్యత తీసుకోవడానికి సిద్ధమా?",
+      join: "ఇప్పుడే చేరండి",
+    },
+  },
+  kn: {
+    nav: {
+      skills: "ಕೌಶಲ್ಯಗಳು",
+      jobs: "ಉದ್ಯೋಗಗಳು",
+      mentorship: "ಮಾರ್ಗದರ್ಶನ",
+      safety: "ಸುರಕ್ಷತೆ",
+      login: "ಲಾಗಿನ್",
+    },
+    hero: {
+      badge: "ಮಹಿಳಾ ಸಬಲೀಕರಣಕ್ಕಾಗಿ AI",
+      title: "ನಿಮ್ಮ ಸಾಮರ್ಥ್ಯವನ್ನು",
+      potential: "ಅನಾವರಣಗೊಳಿಸಿ",
+      subtitle: "ವೈಯಕ್ತೀಕರಿಸಿದ ಕೌಶಲ್ಯಗಳು, ಉದ್ಯೋಗ ಹೊಂದಾಣಿಕೆ, ಮಾರ್ಗದರ್ಶನ ಮತ್ತು ಸುರಕ್ಷತೆಯನ್ನು ಸಂಯೋಜಿಸುವ ವೇದಿಕೆ.",
+      getStarted: "ಪ್ರಾರಂಭಿಸಿ",
+      talkToAI: "AI ನೊಂದಿಗೆ ಮಾತನಾಡಿ",
+    },
+    features: {
+      smartJobs: "ಸ್ಮಾರ್ಟ್ ಉದ್ಯೋಗಗಳು",
+      safetyFirst: "ಸುರಕ್ಷತೆ ಮೊದಲು",
+      upskilling: "ಕೌಶಲ್ಯ ಅಭಿವೃದ್ಧಿ",
+      mentorship: "ಮಾರ್ಗದರ್ಶನ",
+    },
+    sections: {
+      poweredBy: "ಇವರಿಂದ ಚಾಲಿತವಾಗಿದೆ",
+      impact: "ನಮ್ಮ ಪ್ರಭಾವ",
+      community: "ಸಮುದಾಯದ ಧ್ವನಿಗಳು",
+      ready: "ಜವಾಬ್ದಾರಿ ತೆಗೆದುಕೊಳ್ಳಲು ಸಿದ್ಧರಿದ್ದೀರಾ?",
+      join: "ಈಗಲೇ ಸೇರಿಕೊಳ್ಳಿ",
+    },
+  },
+  ml: {
+    nav: {
+      skills: "കഴിവുകൾ",
+      jobs: "ജോലികൾ",
+      mentorship: "മാർഗ്ഗനിർദ്ദേശം",
+      safety: "സുരക്ഷ",
+      login: "ലോഗിൻ",
+    },
+    hero: {
+      badge: "സ്ത്രീ ശാക്തീകരണത്തിന് AI",
+      title: "നിങ്ങളുടെ കഴിവുകൾ",
+      potential: "പുറത്തെടുക്കൂ",
+      subtitle: "വ്യക്തിഗത കഴിവുകൾ, തൊഴിൽ അവസരങ്ങൾ, മാർഗ്ഗനിർദ്ദേശം, സുരക്ഷ എന്നിവ സംയോജിപ്പിക്കുന്ന പ്ലാറ്റ്‌ഫോം.",
+      getStarted: "തുടങ്ങാം",
+      talkToAI: "AI-യോട് സംസാരിക്കൂ",
+    },
+    features: {
+      smartJobs: "സ്മാർട്ട് ജോലികൾ",
+      safetyFirst: "സുരക്ഷ ആദ്യം",
+      upskilling: "നൈപുണ്യ വികസനം",
+      mentorship: "മാർഗ്ഗനിർദ്ദേശം",
+    },
+    sections: {
+      poweredBy: "പവർ ചെയ്യുന്നത്",
+      impact: "ഞങ്ങളുടെ സ്വാധീനം",
+      community: "കമ്മ്യൂണിറ്റി ശബ്ദങ്ങൾ",
+      ready: "തയ്യാറാണോ?",
+      join: "ഇപ്പോൾ തന്നെ ചേരൂ",
+    },
+  },
+};
+
+export type Language = keyof typeof translations;
+export type TranslationKey = keyof typeof translations.en;

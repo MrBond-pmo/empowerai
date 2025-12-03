@@ -6,14 +6,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Globe, Menu, Shield, User } from "lucide-react";
-import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useLanguage } from "@/context/LanguageContext";
+import { Language } from "@/lib/translations";
 
 export function Navbar() {
   const navigate = useNavigate();
-  const [language, setLanguage] = useState("English");
+  const { language, setLanguage, t } = useLanguage();
 
-  const languages = [
+  const languages: { code: Language; name: string }[] = [
     { code: "en", name: "English" },
     { code: "ta", name: "தமிழ் (Tamil)" },
     { code: "te", name: "తెలుగు (Telugu)" },
@@ -28,14 +29,14 @@ export function Navbar() {
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary border-2 border-black">
             <Shield className="h-6 w-6 text-white" />
           </div>
-          <span className="text-2xl font-black tracking-tighter uppercase">Empower<span className="text-primary">AI</span></span>
+          <span className="text-2xl font-black tracking-tighter uppercase">Mahile<span className="text-primary">AI</span></span>
         </div>
 
         <div className="hidden md:flex items-center gap-8 font-bold">
-          <a href="#skills" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">Skills</a>
-          <a href="#jobs" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">Jobs</a>
-          <a href="#mentorship" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">Mentorship</a>
-          <a href="#safety" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">Safety</a>
+          <a href="/skills" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">{t.nav.skills}</a>
+          <a href="/jobs" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">{t.nav.jobs}</a>
+          <a href="/mentorship" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">{t.nav.mentorship}</a>
+          <a href="/safety" className="hover:text-primary hover:underline decoration-4 underline-offset-4 transition-all">{t.nav.safety}</a>
         </div>
 
         <div className="flex items-center gap-4">
@@ -43,14 +44,14 @@ export function Navbar() {
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="border-2 border-black font-bold hidden sm:flex gap-2">
                 <Globe className="h-4 w-4" />
-                {language}
+                {languages.find(l => l.code === language)?.name}
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="border-2 border-black font-bold bg-card">
               {languages.map((lang) => (
                 <DropdownMenuItem 
                   key={lang.code} 
-                  onClick={() => setLanguage(lang.name)}
+                  onClick={() => setLanguage(lang.code)}
                   className="cursor-pointer hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
                 >
                   {lang.name}
@@ -63,7 +64,7 @@ export function Navbar() {
             className="neo-button hidden sm:flex bg-accent text-white hover:bg-accent/90"
             onClick={() => navigate("/auth")}
           >
-            <User className="mr-2 h-4 w-4" /> Login
+            <User className="mr-2 h-4 w-4" /> {t.nav.login}
           </Button>
 
           <Button variant="ghost" size="icon" className="md:hidden border-2 border-black">

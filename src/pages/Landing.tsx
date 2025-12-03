@@ -5,11 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Bot, Briefcase, Check, Globe, Heart, Shield, Sparkles, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Bot, Briefcase, Check, Heart, Shield, Sparkles, Users } from "lucide-react";
 import { useNavigate } from "react-router";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Landing() {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-white overflow-x-hidden">
@@ -28,13 +30,13 @@ export default function Landing() {
             className="space-y-8"
           >
             <Badge className="bg-accent text-white border-2 border-black px-4 py-1 text-sm font-black uppercase tracking-wider neo-shadow-sm">
-              AI for Women's Empowerment
+              {t.hero.badge}
             </Badge>
             <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter uppercase">
-              Unlock Your <span className="text-primary bg-primary/10 px-2 rounded-lg">Potential</span> With AI
+              {t.hero.title} <span className="text-primary bg-primary/10 px-2 rounded-lg">{t.hero.potential}</span>
             </h1>
             <p className="text-xl font-bold text-muted-foreground max-w-lg">
-              A unified platform combining personalized skills, smart job matching, mentorship, and real-time safety intelligence.
+              {t.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -42,14 +44,14 @@ export default function Landing() {
                 className="neo-button text-lg h-16"
                 onClick={() => navigate("/dashboard")}
               >
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                {t.hero.getStarted} <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="border-4 border-black text-lg h-16 font-bold neo-shadow hover:bg-accent hover:text-white transition-all"
               >
-                <Bot className="mr-2 h-5 w-5" /> Talk to Gemini AI
+                <Bot className="mr-2 h-5 w-5" /> {t.hero.talkToAI}
               </Button>
             </div>
           </motion.div>
@@ -62,26 +64,26 @@ export default function Landing() {
           >
             <div className="relative z-10 grid grid-cols-2 gap-4">
               <div className="space-y-4 mt-12">
-                <div className="neo-card bg-secondary p-6 rotate-[-2deg]">
+                <div className="neo-card bg-secondary p-6 rotate-[-2deg] cursor-pointer hover:scale-105 transition-transform" onClick={() => navigate("/jobs")}>
                   <Briefcase className="h-8 w-8 mb-2" />
-                  <h3 className="font-black text-xl">Smart Jobs</h3>
+                  <h3 className="font-black text-xl">{t.features.smartJobs}</h3>
                   <p className="text-xs font-bold">Context-aware matching</p>
                 </div>
-                <div className="neo-card bg-primary text-white p-6 rotate-[2deg]">
+                <div className="neo-card bg-primary text-white p-6 rotate-[2deg] cursor-pointer hover:scale-105 transition-transform" onClick={() => navigate("/safety")}>
                   <Shield className="h-8 w-8 mb-2" />
-                  <h3 className="font-black text-xl">Safety First</h3>
+                  <h3 className="font-black text-xl">{t.features.safetyFirst}</h3>
                   <p className="text-xs font-bold">Real-time threat detection</p>
                 </div>
               </div>
               <div className="space-y-4">
-                <div className="neo-card bg-accent text-white p-6 rotate-[1deg]">
+                <div className="neo-card bg-accent text-white p-6 rotate-[1deg] cursor-pointer hover:scale-105 transition-transform" onClick={() => navigate("/skills")}>
                   <BookOpen className="h-8 w-8 mb-2" />
-                  <h3 className="font-black text-xl">Upskilling</h3>
+                  <h3 className="font-black text-xl">{t.features.upskilling}</h3>
                   <p className="text-xs font-bold">Personalized paths</p>
                 </div>
-                <div className="neo-card bg-yellow-400 text-black p-6 rotate-[-1deg]">
+                <div className="neo-card bg-yellow-400 text-black p-6 rotate-[-1deg] cursor-pointer hover:scale-105 transition-transform" onClick={() => navigate("/mentorship")}>
                   <Users className="h-8 w-8 mb-2" />
-                  <h3 className="font-black text-xl">Mentorship</h3>
+                  <h3 className="font-black text-xl">{t.features.mentorship}</h3>
                   <p className="text-xs font-bold">Global community</p>
                 </div>
               </div>
@@ -98,19 +100,19 @@ export default function Landing() {
       <section id="skills" className="py-20 bg-card border-y-4 border-black">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">Powered by <span className="text-primary">Gemini 2.5 Flash</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black uppercase mb-4">{t.sections.poweredBy} <span className="text-primary">Gemini 2.5 Flash</span></h2>
             <p className="text-xl font-bold text-muted-foreground max-w-2xl mx-auto">
               Our advanced AI engine understands your context, language, and goals to provide hyper-personalized support.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="neo-card bg-background hover:bg-secondary/10 transition-colors">
+            <Card className="neo-card bg-background hover:bg-secondary/10 transition-colors cursor-pointer" onClick={() => navigate("/skills")}>
               <CardContent className="p-8">
                 <div className="h-12 w-12 bg-primary rounded-lg border-2 border-black flex items-center justify-center mb-6">
                   <Sparkles className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-black uppercase mb-4">Personalized Learning</h3>
+                <h3 className="text-2xl font-black uppercase mb-4">{t.features.upskilling}</h3>
                 <p className="font-medium text-muted-foreground mb-6">
                   AI creates custom curriculums based on your career goals, education level, and local job market trends.
                 </p>
@@ -122,12 +124,12 @@ export default function Landing() {
               </CardContent>
             </Card>
 
-            <Card className="neo-card bg-background hover:bg-accent/10 transition-colors md:-mt-8">
+            <Card className="neo-card bg-background hover:bg-accent/10 transition-colors md:-mt-8 cursor-pointer" onClick={() => navigate("/jobs")}>
               <CardContent className="p-8">
                 <div className="h-12 w-12 bg-accent rounded-lg border-2 border-black flex items-center justify-center mb-6">
                   <Briefcase className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-black uppercase mb-4">Career Guidance</h3>
+                <h3 className="text-2xl font-black uppercase mb-4">{t.features.smartJobs}</h3>
                 <p className="font-medium text-muted-foreground mb-6">
                   Smart job matching that understands gaps in resumes (like maternity breaks) and suggests relevant opportunities.
                 </p>
@@ -139,12 +141,12 @@ export default function Landing() {
               </CardContent>
             </Card>
 
-            <Card className="neo-card bg-background hover:bg-yellow-400/10 transition-colors">
+            <Card className="neo-card bg-background hover:bg-yellow-400/10 transition-colors cursor-pointer" onClick={() => navigate("/safety")}>
               <CardContent className="p-8">
                 <div className="h-12 w-12 bg-yellow-400 rounded-lg border-2 border-black flex items-center justify-center mb-6">
                   <Shield className="h-6 w-6 text-black" />
                 </div>
-                <h3 className="text-2xl font-black uppercase mb-4">Safety Intelligence</h3>
+                <h3 className="text-2xl font-black uppercase mb-4">{t.features.safetyFirst}</h3>
                 <p className="font-medium text-muted-foreground mb-6">
                   Real-time threat analysis of situations via text or audio, providing immediate guidance and alerts.
                 </p>
@@ -174,28 +176,28 @@ export default function Landing() {
                 <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Arts</Badge>
                 <Badge className="bg-background border-2 border-black text-lg py-2 px-4">Science</Badge>
               </div>
-              <Button className="neo-button-secondary mt-4">
+              <Button className="neo-button-secondary mt-4" onClick={() => navigate("/mentorship")}>
                 Find a Mentor
               </Button>
             </div>
             <div className="flex-1 grid grid-cols-2 gap-4">
               <div className="neo-card p-4 bg-background">
-                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto flex items-center justify-center"><Users className="h-8 w-8 text-gray-500" /></div>
                 <p className="text-center font-black">Dr. Anjali</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">AI Researcher</p>
               </div>
               <div className="neo-card p-4 bg-background mt-8">
-                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto flex items-center justify-center"><Users className="h-8 w-8 text-gray-500" /></div>
                 <p className="text-center font-black">Sarah J.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Product Lead</p>
               </div>
               <div className="neo-card p-4 bg-background">
-                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto flex items-center justify-center"><Users className="h-8 w-8 text-gray-500" /></div>
                 <p className="text-center font-black">Lakshmi R.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Entrepreneur</p>
               </div>
               <div className="neo-card p-4 bg-background mt-8">
-                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-gray-300 border-2 border-black mb-4 mx-auto flex items-center justify-center"><Users className="h-8 w-8 text-gray-500" /></div>
                 <p className="text-center font-black">Meera K.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Legal Advisor</p>
               </div>
@@ -207,7 +209,7 @@ export default function Landing() {
       {/* Analytics Section */}
       <section className="py-20 bg-primary text-white border-y-4 border-black">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-black uppercase mb-12">Our Impact</h2>
+          <h2 className="text-4xl md:text-5xl font-black uppercase mb-12">{t.sections.impact}</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
               <div className="text-5xl font-black mb-2">50k+</div>
@@ -232,15 +234,15 @@ export default function Landing() {
       {/* Testimonials */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-16">Community Voices</h2>
+          <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-16">{t.sections.community}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="neo-card p-8 bg-card">
               <div className="flex gap-1 mb-4">
                 {[1,2,3,4,5].map(i => <Heart key={i} className="h-5 w-5 text-primary fill-primary" />)}
               </div>
-              <p className="font-bold text-lg mb-6">"After my career break, I felt lost. EmpowerAI's personalized path helped me learn Python in Tamil, and I landed a remote job last month!"</p>
+              <p className="font-bold text-lg mb-6">"After my career break, I felt lost. MahileAI's personalized path helped me learn Python in Tamil, and I landed a remote job last month!"</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
+                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black flex items-center justify-center"><Users className="h-5 w-5 text-gray-500" /></div>
                 <div>
                   <p className="font-black">Kavitha M.</p>
                   <p className="text-xs font-bold text-muted-foreground">Chennai, India</p>
@@ -253,7 +255,7 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"The safety feature is a game changer. I travel late for work, and having the AI companion monitor my journey gives me so much peace of mind."</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
+                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black flex items-center justify-center"><Users className="h-5 w-5 text-gray-500" /></div>
                 <div>
                   <p className="font-black">Sneha P.</p>
                   <p className="text-xs font-bold text-muted-foreground">Bangalore, India</p>
@@ -266,7 +268,7 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"I found an amazing mentor who guided me through starting my own business. The vernacular support made it so easy to connect."</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black"></div>
+                <div className="h-10 w-10 rounded-full bg-gray-300 border-2 border-black flex items-center justify-center"><Users className="h-5 w-5 text-gray-500" /></div>
                 <div>
                   <p className="font-black">Lakshmi S.</p>
                   <p className="text-xs font-bold text-muted-foreground">Hyderabad, India</p>
@@ -280,7 +282,7 @@ export default function Landing() {
       {/* CTA */}
       <section className="py-20 bg-accent text-white border-t-4 border-black">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-black uppercase mb-8">Ready to Take Charge?</h2>
+          <h2 className="text-4xl md:text-6xl font-black uppercase mb-8">{t.sections.ready}</h2>
           <p className="text-xl font-bold mb-8 max-w-2xl mx-auto">
             Join thousands of women transforming their lives with the power of AI. Safe, inclusive, and empowering.
           </p>
@@ -289,7 +291,7 @@ export default function Landing() {
             className="bg-white text-black border-4 border-black text-xl h-20 px-12 font-black neo-shadow hover:bg-gray-100 hover:scale-105 transition-all"
             onClick={() => navigate("/auth")}
           >
-            Join EmpowerAI Now
+            {t.sections.join}
           </Button>
         </div>
       </section>
