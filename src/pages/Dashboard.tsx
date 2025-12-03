@@ -5,9 +5,31 @@ import { SafetyPanel } from "@/components/SafetyPanel";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { BookOpen, Briefcase, CheckCircle, Clock, Target, TrendingUp, Trophy, User } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
+import { BookOpen, Briefcase, CheckCircle, Clock, Loader2, Target, TrendingUp, Trophy, User } from "lucide-react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 export default function Dashboard() {
+  const { user, isAuthenticated, isLoading } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      navigate("/auth");
+    }
+  }, [isLoading, isAuthenticated, navigate]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) return null;
+
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary selection:text-white">
       <Navbar />
@@ -21,7 +43,7 @@ export default function Dashboard() {
             {/* Welcome Section */}
             <section className="neo-card p-8 bg-secondary text-black relative overflow-hidden">
               <div className="relative z-10">
-                <h1 className="text-4xl font-black uppercase mb-2">Welcome back, Priya!</h1>
+                <h1 className="text-4xl font-black uppercase mb-2">Welcome back, {user?.name || "Friend"}!</h1>
                 <p className="text-lg font-bold mb-6 max-w-xl">
                   You're on a 5-day learning streak. Keep up the momentum to unlock your "Data Science" badge.
                 </p>
