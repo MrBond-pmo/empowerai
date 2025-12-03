@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/input-otp";
 
 import { useAuth } from "@/hooks/use-auth";
-import { ArrowRight, Loader2, Mail, UserX } from "lucide-react";
+import { ArrowRight, Loader2, Mail, Shield, UserX } from "lucide-react";
 import { Suspense, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
@@ -97,28 +97,23 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
 
       
       {/* Auth Content */}
-      <div className="flex-1 flex items-center justify-center">
-        <div className="flex items-center justify-center h-full flex-col">
-        <Card className="min-w-[350px] pb-0 border shadow-md">
+      <div className="flex-1 flex items-center justify-center p-4">
+        <div className="flex items-center justify-center h-full flex-col w-full max-w-md">
+        <Card className="w-full pb-0 border-4 border-black neo-shadow bg-card">
           {step === "signIn" ? (
             <>
               <CardHeader className="text-center">
-              <div className="flex justify-center">
-                    <img
-                      src="./logo.svg"
-                      alt="Lock Icon"
-                      width={64}
-                      height={64}
-                      className="rounded-lg mb-4 mt-4 cursor-pointer"
-                      onClick={() => navigate("/")}
-                    />
+              <div className="flex justify-center mb-4">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary border-4 border-black cursor-pointer" onClick={() => navigate("/")}>
+                      <Shield className="h-8 w-8 text-white" />
+                    </div>
                   </div>
-                <CardTitle className="text-xl">Get Started</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-2xl font-black uppercase">Get Started</CardTitle>
+                <CardDescription className="font-bold text-muted-foreground">
                   Enter your email to log in or sign up
                 </CardDescription>
               </CardHeader>
@@ -132,14 +127,14 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                         name="email"
                         placeholder="name@example.com"
                         type="email"
-                        className="pl-9"
+                        className="pl-9 border-2 border-black font-bold"
                         disabled={isLoading}
                         required
                       />
                     </div>
                     <Button
                       type="submit"
-                      variant="outline"
+                      className="bg-primary text-white border-2 border-black hover:bg-primary/90"
                       size="icon"
                       disabled={isLoading}
                     >
@@ -151,16 +146,16 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                     </Button>
                   </div>
                   {error && (
-                    <p className="mt-2 text-sm text-red-500">{error}</p>
+                    <p className="mt-2 text-sm text-destructive font-bold">{error}</p>
                   )}
                   
-                  <div className="mt-4">
+                  <div className="mt-6">
                     <div className="relative">
                       <div className="absolute inset-0 flex items-center">
-                        <span className="w-full border-t" />
+                        <span className="w-full border-t-2 border-black" />
                       </div>
-                      <div className="relative flex justify-center text-xs uppercase">
-                        <span className="bg-background px-2 text-muted-foreground">
+                      <div className="relative flex justify-center text-xs uppercase font-black">
+                        <span className="bg-card px-2 text-muted-foreground">
                           Or
                         </span>
                       </div>
@@ -169,7 +164,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                     <Button
                       type="button"
                       variant="outline"
-                      className="w-full mt-4"
+                      className="w-full mt-6 border-2 border-black font-bold hover:bg-accent hover:text-white"
                       onClick={handleGuestLogin}
                       disabled={isLoading}
                     >
@@ -183,8 +178,8 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
           ) : (
             <>
               <CardHeader className="text-center mt-4">
-                <CardTitle>Check your email</CardTitle>
-                <CardDescription>
+                <CardTitle className="font-black uppercase">Check your email</CardTitle>
+                <CardDescription className="font-bold">
                   We've sent a code to {step.email}
                 </CardDescription>
               </CardHeader>
@@ -211,21 +206,21 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                     >
                       <InputOTPGroup>
                         {Array.from({ length: 6 }).map((_, index) => (
-                          <InputOTPSlot key={index} index={index} />
+                          <InputOTPSlot key={index} index={index} className="border-2 border-black font-bold h-12 w-10" />
                         ))}
                       </InputOTPGroup>
                     </InputOTP>
                   </div>
                   {error && (
-                    <p className="mt-2 text-sm text-red-500 text-center">
+                    <p className="mt-2 text-sm text-destructive font-bold text-center">
                       {error}
                     </p>
                   )}
-                  <p className="text-sm text-muted-foreground text-center mt-4">
+                  <p className="text-sm text-muted-foreground text-center mt-4 font-bold">
                     Didn't receive a code?{" "}
                     <Button
                       variant="link"
-                      className="p-0 h-auto"
+                      className="p-0 h-auto font-black text-primary"
                       onClick={() => setStep("signIn")}
                     >
                       Try again
@@ -235,7 +230,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                 <CardFooter className="flex-col gap-2">
                   <Button
                     type="submit"
-                    className="w-full"
+                    className="w-full bg-primary text-white border-2 border-black font-bold hover:bg-primary/90"
                     disabled={isLoading || otp.length !== 6}
                   >
                     {isLoading ? (
@@ -255,7 +250,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
                     variant="ghost"
                     onClick={() => setStep("signIn")}
                     disabled={isLoading}
-                    className="w-full"
+                    className="w-full font-bold"
                   >
                     Use different email
                   </Button>
@@ -264,7 +259,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
             </>
           )}
 
-          <div className="py-4 px-6 text-xs text-center text-muted-foreground bg-muted border-t rounded-b-lg">
+          <div className="py-4 px-6 text-xs text-center text-muted-foreground bg-muted border-t-4 border-black font-bold">
             Secured by{" "}
             <a
               href="https://vly.ai"
