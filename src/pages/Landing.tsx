@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Bot, Briefcase, Check, Heart, Shield, Sparkles, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Bot, Briefcase, Check, Heart, Shield, Sparkles, User, Users } from "lucide-react";
 import { useNavigate } from "react-router";
 
 export default function Landing() {
@@ -65,7 +65,7 @@ export default function Landing() {
           >
             <div className="relative z-10 grid grid-cols-2 gap-4">
               <div className="space-y-4 mt-12">
-                <div className="neo-card bg-secondary p-6 rotate-[-2deg]">
+                <div className="neo-card bg-secondary text-black p-6 rotate-[-2deg]">
                   <Briefcase className="h-8 w-8 mb-2" />
                   <h3 className="font-black text-xl">{t.features.smartJobs}</h3>
                   <p className="text-xs font-bold">Context-aware matching</p>
@@ -183,22 +183,30 @@ export default function Landing() {
             </div>
             <div className="flex-1 grid grid-cols-2 gap-4">
               <div className="neo-card p-4 bg-background">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
+                  <User className="h-8 w-8 text-muted-foreground" />
+                </div>
                 <p className="text-center font-black">Dr. Anjali</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">AI Researcher</p>
               </div>
               <div className="neo-card p-4 bg-background mt-8">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
+                  <User className="h-8 w-8 text-muted-foreground" />
+                </div>
                 <p className="text-center font-black">Sarah J.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Product Lead</p>
               </div>
               <div className="neo-card p-4 bg-background">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
+                  <User className="h-8 w-8 text-muted-foreground" />
+                </div>
                 <p className="text-center font-black">Lakshmi R.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Entrepreneur</p>
               </div>
               <div className="neo-card p-4 bg-background mt-8">
-                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto"></div>
+                <div className="h-16 w-16 rounded-full bg-zinc-800 border-2 border-black mb-4 mx-auto flex items-center justify-center">
+                  <User className="h-8 w-8 text-muted-foreground" />
+                </div>
                 <p className="text-center font-black">Meera K.</p>
                 <p className="text-center text-xs font-bold text-muted-foreground">Legal Advisor</p>
               </div>
@@ -243,7 +251,9 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"After my career break, I felt lost. MahileAI's personalized path helped me learn Python in Tamil, and I landed a remote job last month!"</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black"></div>
+                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center">
+                  <User className="h-5 w-5 text-muted-foreground" />
+                </div>
                 <div>
                   <p className="font-black">Kavitha M.</p>
                   <p className="text-xs font-bold text-muted-foreground">Chennai, India</p>
@@ -256,7 +266,9 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"The safety feature is a game changer. I travel late for work, and having the AI companion monitor my journey gives me so much peace of mind."</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black"></div>
+                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center">
+                  <User className="h-5 w-5 text-muted-foreground" />
+                </div>
                 <div>
                   <p className="font-black">Sneha P.</p>
                   <p className="text-xs font-bold text-muted-foreground">Bangalore, India</p>
@@ -269,7 +281,9 @@ export default function Landing() {
               </div>
               <p className="font-bold text-lg mb-6">"I found an amazing mentor who guided me through starting my own business. The vernacular support made it so easy to connect."</p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black"></div>
+                <div className="h-10 w-10 rounded-full bg-zinc-800 border-2 border-black flex items-center justify-center">
+                  <User className="h-5 w-5 text-muted-foreground" />
+                </div>
                 <div>
                   <p className="font-black">Lakshmi S.</p>
                   <p className="text-xs font-bold text-muted-foreground">Hyderabad, India</p>
